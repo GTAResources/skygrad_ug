@@ -1,0 +1,67 @@
+#pragma once
+
+class CColourSet
+{
+public:
+	float ambr;
+	float ambg;
+	float ambb;
+	float ambobjr;
+	float ambobjg;
+	float ambobjb;
+	float ambr_bl;
+	float ambg_bl;
+	float ambb_bl;
+	float ambobjr_bl;
+	float ambobjg_bl;
+	float ambobjb_bl;
+	float ambBeforeBrightnessr;
+	float ambBeforeBrightnessg;
+	float ambBeforeBrightnessb;
+	short skytopr;
+	short skytopg;
+	short skytopb;
+	short skybotr;
+	short skybotg;
+	short skybotb;
+	short suncorer;
+	short suncoreg;
+	short suncoreb;
+	short suncoronar;
+	short suncoronag;
+	short suncoronab;
+	float sunsz;
+	float sprsz;
+	float sprbght;
+	short shd;
+	short lightshd;
+	short poleshd;
+	float farclp;
+	float fogst;
+	float lightonground;
+	short lowcloudr;
+	short lowcloudg;
+	short lowcloudb;
+	short fluffycloudr;
+	short fluffycloudg;
+	short fluffycloudb;
+	float waterr;
+	float waterg;
+	float waterb;
+	float watera;
+	float postfx1r;
+	float postfx1g;
+	float postfx1b;
+	float postfx1a;
+	float postfx2r;
+	float postfx2g;
+	float postfx2b;
+	float postfx2a;
+	float cloudalpha;
+	int intensityLimit;
+	short waterfogalpha;
+	float directionalmult;
+	float lodDistMult;
+	int colfilt;
+	int tcycflags;
+};

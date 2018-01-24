@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="File di origine">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="File di intestazione">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="File di risorse">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="StdInc.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CCamera.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CClouds.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CMatrix.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CMatrixLink.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlaceable.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CRGBA.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CSimpleTransform.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeCycle.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CVector.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CWeather.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Hook.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Inject.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderWare.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CDraw.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CGame.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CPostEffects.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CVector2D.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="CColourSet.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DllMain.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="StdInc.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CClouds.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeCycle.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CWeather.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Inject.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderWare.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CDraw.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CVector.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CPostEffects.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="CColourSet.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
