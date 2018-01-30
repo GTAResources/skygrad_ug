@@ -29,6 +29,7 @@
     <ClInclude Include="Hook.h" />
     <ClInclude Include="Inject.h" />
     <ClInclude Include="RenderWare.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="StdInc.h" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +49,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StdInc.h</PrecompiledHeaderFile>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="skygrad.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1148425E-EE1E-4A74-9E0C-DEC86B0559B8}</ProjectGuid>

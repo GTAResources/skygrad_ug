@@ -139,11 +139,11 @@ void CClouds::RenderSkyPolys(void)
 
 	belowHorizonGrey = *CTimeCycle::ms_belowHorizonGrey;
 	belowHorizonGrey.m_ucRed +=
-		(unsigned char)(fBlendFactor * static_cast<float>(CTimeCycle::m_CurrentColours->skybotr - belowHorizonGrey.m_ucRed));
+		(unsigned char)(fBlendFactor * static_cast<float>(CTimeCycle::m_CurrentColours->m_nSkyBottomRed - belowHorizonGrey.m_ucRed));
 	belowHorizonGrey.m_ucGreen +=
-		(unsigned char)(fBlendFactor * static_cast<float>(CTimeCycle::m_CurrentColours->skybotg - belowHorizonGrey.m_ucGreen));
+		(unsigned char)(fBlendFactor * static_cast<float>(CTimeCycle::m_CurrentColours->m_nSkyBottomGreen - belowHorizonGrey.m_ucGreen));
 	belowHorizonGrey.m_ucBlue +=
-		(unsigned char)(fBlendFactor * static_cast<float>(CTimeCycle::m_CurrentColours->skybotb - belowHorizonGrey.m_ucBlue));
+		(unsigned char)(fBlendFactor * static_cast<float>(CTimeCycle::m_CurrentColours->m_nSkyBottomBlue - belowHorizonGrey.m_ucBlue));
 
 #ifdef SKYP_SMOOTH_GRADIENT
 	float fMaxSampleU, fMaxSampleV, aSampleV[3];
@@ -184,12 +184,12 @@ void CClouds::RenderSkyPolys(void)
 		aVertices[0], aVertices[1],
 		aVertices[2], aVertices[3],
 #ifndef POSTFX_DEBUG_GRID
-		CTimeCycle::m_CurrentColours->skytopr,
-		CTimeCycle::m_CurrentColours->skytopg,
-		CTimeCycle::m_CurrentColours->skytopb,
-		CTimeCycle::m_CurrentColours->skybotr,
-		CTimeCycle::m_CurrentColours->skybotg,
-		CTimeCycle::m_CurrentColours->skybotb
+		CTimeCycle::m_CurrentColours->m_nSkyTopRed,
+		CTimeCycle::m_CurrentColours->m_nSkyTopGreen,
+		CTimeCycle::m_CurrentColours->m_nSkyTopBlue,
+		CTimeCycle::m_CurrentColours->m_nSkyBottomRed,
+		CTimeCycle::m_CurrentColours->m_nSkyBottomGreen,
+		CTimeCycle::m_CurrentColours->m_nSkyBottomBlue
 #else
 		255, 0, 0,
 		255, 0, 0
@@ -206,9 +206,9 @@ void CClouds::RenderSkyPolys(void)
 	(
 		aVertices[2], aVertices[3],
 #ifndef POSTFX_DEBUG_GRID
-		CTimeCycle::m_CurrentColours->skybotr,
-		CTimeCycle::m_CurrentColours->skybotg,
-		CTimeCycle::m_CurrentColours->skybotb
+		CTimeCycle::m_CurrentColours->m_nSkyBottomRed,
+		CTimeCycle::m_CurrentColours->m_nSkyBottomGreen,
+		CTimeCycle::m_CurrentColours->m_nSkyBottomBlue
 #else
 		0, 255, 0
 #endif
@@ -263,12 +263,12 @@ void CClouds::RenderSkyPolys(void)
 		aVertices[0], aVertices[1],
 		aVertices[2], aVertices[3],
 #ifndef POSTFX_DEBUG_GRID
-		CTimeCycle::m_CurrentColours->skytopr,
-		CTimeCycle::m_CurrentColours->skytopg,
-		CTimeCycle::m_CurrentColours->skytopb,
-		CTimeCycle::m_CurrentColours->skytopr,
-		CTimeCycle::m_CurrentColours->skytopg,
-		CTimeCycle::m_CurrentColours->skytopb
+		CTimeCycle::m_CurrentColours->m_nSkyTopRed,
+		CTimeCycle::m_CurrentColours->m_nSkyTopGreen,
+		CTimeCycle::m_CurrentColours->m_nSkyTopBlue,
+		CTimeCycle::m_CurrentColours->m_nSkyTopRed,
+		CTimeCycle::m_CurrentColours->m_nSkyTopGreen,
+		CTimeCycle::m_CurrentColours->m_nSkyTopBlue
 #else
 		255, 255, 255,
 		255, 255, 255
