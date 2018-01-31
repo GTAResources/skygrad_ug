@@ -2,6 +2,7 @@
 
 #include <stdint.h>
 
+// NOTE: Emission colours aren't used
 class CColourSet
 {
 public:
@@ -10,7 +11,10 @@ public:
 	float m_fAmbientRed_Bl, m_fAmbientGreen_Bl, m_fAmbientBlue_Bl;
 	float m_fAmbientRed_Obj_Bl, m_fAmbientGreen_Obj_Bl, m_fAmbientBlue_Obj_Bl;
 	float m_fEmissiveRed, m_fEmissiveGreen, m_fEmissiveBlue;
+	float m_fDirectionalRed, m_fDirectionalGreen, m_fDirectionalBlue;
 	float m_fAmbBeforeBrightnessRed, m_fAmbBeforeBrightnessGreen, m_fAmbBeforeBrightnessBlue;
+	float m_fAmbBlBeforeBrightnessRed, m_fAmbBlBeforeBrightnessGreen, m_fAmbBlBeforeBrightnessBlue;
+	float m_fEmissiveBeforeBrightnessRed, m_fEmissiveBeforeBrightnessGreen, m_fEmissiveBeforeBrightnessBlue;
 	uint16_t m_nSkyTopRed, m_nSkyTopGreen, m_nSkyTopBlue;
 	uint16_t m_nSkyBottomRed, m_nSkyBottomGreen, m_nSkyBottomBlue;
 	uint16_t m_nSunCoreRed, m_nSunCoreGreen, m_nSunCoreBlue;
@@ -44,13 +48,11 @@ public:
 	bool m_bSandstormWeather : 1; // Desert Storm!
 	bool m_bEarthQuake : 1; // Unused, affects peds in base game
 	bool m_bBeastie : 1; // I don't really know what R* planned with this effect
-	bool m_bBlurringColours : 1;  // Ambient blurring colours - since we're using sharptrails this is not needed
-	bool m_bEmissionColours : 1; // Use emission colours, disables blurring!!!
-	bool m_bLeedsAmbient : 1; // Leeds ambient lightning
-	bool m_bViceAmbient : 1; // GTA:VC-like ambient lightning
+	bool m_bBlurringColours : 1;  // Ambient blurring colour, handled like in GTA:VC
+	bool m_bEmissionColours : 1; // Use emission colours, disables m_bBlurringColours if set
 	bool m_bHeatHazeFx : 1; // Hot-ness effect
 	bool m_bSunGlareFx : 1; // Water vertices have a glow effect on them and so do vehicles
 	bool m_bReducedCloudCoverage : 1; // Reduced cloud coverage
-	bool m_bExtraSunnyNess : 1; // Lowers low clouds intensity, a bit like reduced cloud coverage but this affects the colours not the actual number of volumetric clouds
+	bool m_bExtraSunnyNess : 1; // Lowers low clouds intensity, a bit like reduced cloud coverage but this affects the colours not the actual size of volumetric clouds
 	bool m_bRainbows : 1; // When interpolating during the latter half of an in-game hour after rain a rainbow is drawn directly opposite of the sun
 };
