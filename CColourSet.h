@@ -10,11 +10,9 @@ public:
 	float m_fAmbientRed_Obj, m_fAmbientGreen_Obj, m_fAmbientBlue_Obj;
 	float m_fAmbientRed_Bl, m_fAmbientGreen_Bl, m_fAmbientBlue_Bl;
 	float m_fAmbientRed_Obj_Bl, m_fAmbientGreen_Obj_Bl, m_fAmbientBlue_Obj_Bl;
-	float m_fEmissiveRed, m_fEmissiveGreen, m_fEmissiveBlue;
 	float m_fDirectionalRed, m_fDirectionalGreen, m_fDirectionalBlue;
 	float m_fAmbBeforeBrightnessRed, m_fAmbBeforeBrightnessGreen, m_fAmbBeforeBrightnessBlue;
 	float m_fAmbBlBeforeBrightnessRed, m_fAmbBlBeforeBrightnessGreen, m_fAmbBlBeforeBrightnessBlue;
-	float m_fEmissiveBeforeBrightnessRed, m_fEmissiveBeforeBrightnessGreen, m_fEmissiveBeforeBrightnessBlue;
 	uint16_t m_nSkyTopRed, m_nSkyTopGreen, m_nSkyTopBlue;
 	uint16_t m_nSkyBottomRed, m_nSkyBottomGreen, m_nSkyBottomBlue;
 	uint16_t m_nSunCoreRed, m_nSunCoreGreen, m_nSunCoreBlue;
