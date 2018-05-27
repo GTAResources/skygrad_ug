@@ -2,46 +2,30 @@
 #include "Inject.h"
 #include "CTimeCycle.h"
 
-VOID WINAPI InstallAllHooks(void)
+#define SKYGRADAPI __declspec(dllexport)
+
+extern "C"
+{
+	SKYGRADAPI RwRaster* SkyGrad_GetGrainRaster8() { return CPostEffects::ms_pGrainRaster8; }
+}
+
+void GetTimeCycleColours()
 {
 	CTimeCycle::m_CurrentColours = Hook::ReadMemory<int, CColourSet*>(0x560241);
+}
 
+VOID WINAPI InstallAllHooks(void)
+{
 	Hook::InstallHookNearOffset((LPVOID)0x0053BBCC, DeleteShaders);
 
 	Hook::InstallHookNearOffset((LPVOID)0x0053D81D, CClouds::RenderSkyPolys);
 
 	Hook::InstallHookNearOffset((LPVOID)0x005BD766, CreateShaders);
 
-	Hook::InstallHookNearJump((LPVOID)0x007010C6, HOOK_7010C6_CPostEffects__Close);
-#ifndef POSTFX_DEBUG_GRID
-	Hook::WriteProtectedMemory<unsigned char>((LPVOID)0x007010D2, 8);
-#else
-	Hook::WriteProtectedMemory<unsigned char>((LPVOID)0x007010D2, 0x0C);
-#endif
 	Hook::InstallHookNearJump((LPVOID)0x00704635, CPostEffects::CreateGrainRaster);
 
 	Hook::SkipProtectedMemory((PBYTE)RxD3D9SubmitNoLightBody + 0x56, (PBYTE)RxD3D9SubmitNoLightBody + 0x62);
 	Hook::InstallHookNearJump((PBYTE)RxD3D9SubmitNoLightBody + 0x12F, HOOK_RxD3D9SubmitNoLightBody_12F);
-}
-
-void __declspec(naked) HOOK_7010C6_CPostEffects__Close(void)
-{
-#define _7010CB_CPostEffects__Close	0x007010CB
-	__asm
-	{
-		call	RwRasterDestroy
-		mov		eax, CPostEffects::ms_pGrainRaster8
-		push	eax
-		call	RwRasterDestroy
-#ifdef POSTFX_DEBUG_GRID
-		mov		ecx, CPostEffects::ms_pGridRaster
-		push	ecx
-		call	RwRasterDestroy
-#endif
-		mov		edx, _7010CB_CPostEffects__Close
-		jmp		edx
-	}
-#undef _7010CB_CPostEffects__Close
 }
 
 void __declspec(naked) HOOK_RxD3D9SubmitNoLightBody_12F(void)

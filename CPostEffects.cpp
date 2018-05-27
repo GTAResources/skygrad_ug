@@ -24,6 +24,8 @@ void CPostEffects::Initialise(void)
 
 void CPostEffects::CreateGrainRaster(void)
 {
+	GetTimeCycleColours();
+
 	RwUInt8 *pRgba, *pLum8, ucGrayScale;
 
 	*ms_pGrainRaster = RwRasterCreate(POSTFX_GRAIN_SIZE, POSTFX_GRAIN_SIZE, 32, rwRASTERFORMAT8888 | rwRASTERTYPETEXTURE);

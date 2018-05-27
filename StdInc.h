@@ -54,4 +54,6 @@ extern RwIm3DVertex (*const g_aTempVertexBuffer)[2048];
 extern WINEXP const RwUInt32 g_aVSSkyGradAsm[];
 extern WINEXP const RwUInt32 g_aPSSkyGradAsm[];
 
+extern void GetTimeCycleColours();
+
 #endif //_STDINC_H_
