@@ -12,6 +12,7 @@ public:
 	float			m_fDirectionalRed, m_fDirectionalGreen, m_fDirectionalBlue;
 	float			m_fAmbBeforeBrightnessRed, m_fAmbBeforeBrightnessGreen, m_fAmbBeforeBrightnessBlue;
 	float			m_fAmbBlBeforeBrightnessRed, m_fAmbBlBeforeBrightnessGreen, m_fAmbBlBeforeBrightnessBlue;
+	uint32_t		m_fFogColourRed, m_fFogColourGreen, m_fFogColourBlue;
 	uint16_t		m_nSkyTopRed, m_nSkyTopGreen, m_nSkyTopBlue;
 	uint16_t		m_nSkyBottomRed, m_nSkyBottomGreen, m_nSkyBottomBlue;
 	uint16_t		m_nSunCoreRed, m_nSunCoreGreen, m_nSunCoreBlue;
