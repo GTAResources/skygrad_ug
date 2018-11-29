@@ -10,6 +10,8 @@ public:
 	float			m_fAmbientRed_Bl, m_fAmbientGreen_Bl, m_fAmbientBlue_Bl;
 	float			m_fAmbientRed_Obj_Bl, m_fAmbientGreen_Obj_Bl, m_fAmbientBlue_Obj_Bl;
 	float			m_fDirectionalRed, m_fDirectionalGreen, m_fDirectionalBlue;
+	float			m_fDirectionalBackRed, m_fDirectionalBackGreen, m_fDirectionalBackBlue;
+	float			m_fDirectionalBackIntensity;
 	float			m_fAmbBeforeBrightnessRed, m_fAmbBeforeBrightnessGreen, m_fAmbBeforeBrightnessBlue;
 	float			m_fAmbBlBeforeBrightnessRed, m_fAmbBlBeforeBrightnessGreen, m_fAmbBlBeforeBrightnessBlue;
 	float			m_fFogColourRed, m_fFogColourGreen, m_fFogColourBlue;
@@ -25,11 +27,15 @@ public:
 	uint16_t		m_nPoleShadowStrength;
 	float			m_fFarClip;
 	float			m_fFogStart;
+	float			m_fNightFactor;
 	float			m_fLightsOnGroundBrightness;
 	uint16_t		m_nLowCloudsRed, m_nLowCloudsGreen, m_nLowCloudsBlue;
 	uint16_t		m_nFluffyCloudsBottomRed, m_nFluffyCloudsBottomGreen, m_nFluffyCloudsBottomBlue;
 	uint16_t		m_nFluffyCloudsTopRed, m_nFluffyCloudsTopGreen, m_nFluffyCloudsTopBlue;
 	float			m_fWaterRed, m_fWaterGreen, m_fWaterBlue, m_fWaterAlpha;
+	float			m_fGlowThresholdRed, m_fGlowThresholdGreen, m_fGlowThresholdBlue;
+	float			m_fGlowStrengthRed, m_fGlowStrengthGreen, m_fGlowStrengthBlue;
+	float			m_fCloudSpeedX, m_fCloudSpeedY, m_fCloudSpeedZ;
 	float			m_fPostFx1Red, m_fPostFx1Green, m_fPostFx1Blue, m_fPostFx1Alpha;
 	float			m_fPostFx2Red, m_fPostFx2Green, m_fPostFx2Blue, m_fPostFx2Alpha;
 	float			m_fCloudAlpha;
@@ -38,4 +44,8 @@ public:
 	float			m_fDirectionalMult;
 	float			m_fLodDistMult;
 	float			m_fBlurOffset;
+	float			m_fAmbientLowRange, m_fAmbientHighRange;
+	float			m_fDirectionalLowRange, m_fDirectionalHighRange;
+	float			m_fDirectionalBackLowRange, m_fDirectionalBackHighRange;
+	float			m_fNearFarClipRatio;
 };
