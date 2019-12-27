@@ -10,14 +10,6 @@
 class CPostEffects
 {
 public:
-	struct Vtbl
-	{
-#define _CPostEffects__Close		0x007010C0
-		static void (__cdecl *const Close)(void);
-#define _CPostEffects__Initialise	0x00704630
-		static void (__cdecl *const Initialise)(void);
-	};
-
 #define _CPostEffects__ms_pGrainRaster	0x00C402B0
 	static RwRaster **const ms_pGrainRaster;
 
@@ -28,8 +20,8 @@ public:
 	WINEXP static void *ms_pVSSkyGrad;
 	WINEXP static void *ms_pPSSkyGrad;
 
-	static void Close(void);
-	static void Initialise(void);
+	static bool CloseCB(void);
+	static bool InitialiseCB(void);
 
 	WINEXP static void CreateGrainRaster(void);
 };

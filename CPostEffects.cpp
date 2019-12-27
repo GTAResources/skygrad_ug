@@ -8,18 +8,22 @@ RwRaster *CPostEffects::ms_pGridRaster;
 void *CPostEffects::ms_pVSSkyGrad;
 void *CPostEffects::ms_pPSSkyGrad;
 
-void (__cdecl *const CPostEffects::Vtbl::Close)(void) = (decltype(Close))_CPostEffects__Close;
-
-void CPostEffects::Close(void)
+bool CPostEffects::CloseCB(void)
 {
-	Vtbl::Close();
+	if (ms_pGrainRaster8)
+	{
+		RwRasterDestroy(ms_pGrainRaster8);
+		ms_pGrainRaster8 = nullptr;
+	}
+
+	return true;
 }
 
-void (__cdecl *const CPostEffects::Vtbl::Initialise)(void) = (decltype(Initialise))_CPostEffects__Initialise;
-
-void CPostEffects::Initialise(void)
+bool CPostEffects::InitialiseCB(void)
 {
-	Vtbl::Initialise();
+	CreateGrainRaster();
+
+	return true;
 }
 
 void CPostEffects::CreateGrainRaster(void)

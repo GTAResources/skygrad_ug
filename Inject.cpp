@@ -1,13 +1,7 @@
 #include "StdInc.h"
 #include "Inject.h"
 #include "CTimeCycle.h"
-
-#define SKYGRADAPI __declspec(dllexport)
-
-extern "C"
-{
-	SKYGRADAPI RwRaster* SkyGrad_GetGrainRaster8() { return CPostEffects::ms_pGrainRaster8; }
-}
+#include "Imports.hpp"
 
 void GetTimeCycleColours()
 {
@@ -22,7 +16,10 @@ VOID WINAPI InstallAllHooks(void)
 
 	Hook::InstallHookNearOffset((LPVOID)0x005BD766, CreateShaders);
 
-	Hook::InstallHookNearJump((LPVOID)0x00704635, CPostEffects::CreateGrainRaster);
+	//Hook::InstallHookNearJump((LPVOID)0x00704635, CPostEffects::CreateGrainRaster);
+
+	Imports::RegisterEventCallback(Imports::EVENT_INITPOSTEFFECTS, &CPostEffects::InitialiseCB);
+	Imports::RegisterEventCallback(Imports::EVENT_CLOSEPOSTEFFECTS, &CPostEffects::CloseCB);
 
 	Hook::SkipProtectedMemory((PBYTE)RxD3D9SubmitNoLightBody + 0x56, (PBYTE)RxD3D9SubmitNoLightBody + 0x62);
 	Hook::InstallHookNearJump((PBYTE)RxD3D9SubmitNoLightBody + 0x12F, HOOK_RxD3D9SubmitNoLightBody_12F);
