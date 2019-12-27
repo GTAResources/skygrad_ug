@@ -8,8 +8,10 @@ RwRaster *CPostEffects::ms_pGridRaster;
 void *CPostEffects::ms_pVSSkyGrad;
 void *CPostEffects::ms_pPSSkyGrad;
 
-bool CPostEffects::CloseCB(void)
+bool CPostEffects::CloseCB(void* pData)
 {
+	UNREFERENCED_PARAMETER(pData);
+
 	if (ms_pGrainRaster8)
 	{
 		RwRasterDestroy(ms_pGrainRaster8);
@@ -19,8 +21,10 @@ bool CPostEffects::CloseCB(void)
 	return true;
 }
 
-bool CPostEffects::InitialiseCB(void)
+bool CPostEffects::InitialiseCB(void* pData)
 {
+	UNREFERENCED_PARAMETER(pData);
+
 	CreateGrainRaster();
 
 	return true;

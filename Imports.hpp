@@ -4,7 +4,7 @@
 
 namespace Imports
 {
-	typedef bool(*EventHook)();
+	typedef bool(*EventHook)(void* pData);
 
 	enum eEventType
 	{
@@ -16,6 +16,9 @@ namespace Imports
 		EVENT_SHUTDOWNFORRESTART, // Returning false in this callback blocks other callbacks and the default UG code from being executed
 		EVENT_BEFORE_PROCESSGAME, // Returning false in this callback blocks other callbacks and the default UG code from being executed
 		EVENT_AFTER_PROCESSGAME, // Return value from callback is ignored
+
+		// CTheScripts
+		EVENT_STARTTESTSCRIPT, // Returning false in this callback blocks other callbacks and the default UG code from being executed. Fires in CGame::Initialise and in CGame::ReInitGameObjectVariables
 
 		// CPopulation
 		EVENT_UPDATEPOPULATION, // Returning false in this callback will make CPopulation::Update never spawn new population (and also blocks other callbacks from being executed). 
