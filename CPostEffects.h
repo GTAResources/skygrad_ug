@@ -20,8 +20,8 @@ public:
 	WINEXP static void *ms_pVSSkyGrad;
 	WINEXP static void *ms_pPSSkyGrad;
 
-	static bool CloseCB(void);
-	static bool InitialiseCB(void);
+	static bool CloseCB();
+	static bool InitialiseCB();
 
 	WINEXP static void CreateGrainRaster(void);
 };

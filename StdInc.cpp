@@ -1,4 +1,5 @@
 #include "StdInc.h"
+#include "Imports.hpp"
 
 CCamera *const g_TheCamera = (decltype(g_TheCamera))_g_TheCamera;
 RwUInt32 *const g_uiTempBufferVerticesStored = (decltype(g_uiTempBufferVerticesStored))_g_uiTempBufferVerticesStored;
@@ -62,6 +63,12 @@ void CreateShaders(void)
 {
 	RwD3D9CreateVertexShader(g_aVSSkyGradAsm, &CPostEffects::ms_pVSSkyGrad);
 	RwD3D9CreatePixelShader(g_aPSSkyGradAsm, &CPostEffects::ms_pPSSkyGrad);
+
+	// Can't call this from DllMain because Underground_Core.asi would not be loaded yet
+	Imports::hUndergroundCoreModule = GetModuleHandleA("Underground_Core.asi");
+
+	Imports::RegisterEventCallback(Imports::EVENT_INITPOSTEFFECTS, &CPostEffects::InitialiseCB);
+	Imports::RegisterEventCallback(Imports::EVENT_CLOSEPOSTEFFECTS, &CPostEffects::CloseCB);
 }
 
 void DeleteShaders(void)

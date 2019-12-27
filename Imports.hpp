@@ -35,7 +35,7 @@ namespace Imports
 		MAX_EVENT_CALLBACKS
 	};
 
-	static const HMODULE hUndergroundCoreModule = GetModuleHandleA("Underground_Core.asi");
+	static HMODULE hUndergroundCoreModule;
 
 	// A wrapper around GetProcAddress so we can get a read-only address of the function export
 	const uint32_t GetFunctionAddress(HMODULE hModule, std::string sExportName)
