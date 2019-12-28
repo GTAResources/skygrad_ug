@@ -11,6 +11,8 @@ namespace Imports
 		// Global scope
 		EVENT_BEFORE_RENDER2DSTUFF, // Returning false in this callback blocks other callbacks and the default UG code from being executed
 		EVENT_AFTER_RENDER2DSTUFF, // Return value from callback is ignored
+		EVENT_BEFORE_RENDERSCENE, // Returning false in this callback blocks other callbacks and the default UG code from being executed
+		EVENT_AFTER_RENDERSCENE, // Return value from callback is ignored
 
 		// CGame
 		EVENT_SHUTDOWNFORRESTART, // Returning false in this callback blocks other callbacks and the default UG code from being executed
