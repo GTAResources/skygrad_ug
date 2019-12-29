@@ -67,8 +67,8 @@ void CreateShaders(void)
 	// Can't call this from DllMain because Underground_Core.asi would not be loaded yet
 	Imports::hUndergroundCoreModule = GetModuleHandleA("Underground_Core.asi");
 
-	Imports::RegisterEventCallback(Imports::EVENT_INITPOSTEFFECTS, &CPostEffects::InitialiseCB);
-	Imports::RegisterEventCallback(Imports::EVENT_CLOSEPOSTEFFECTS, &CPostEffects::CloseCB);
+	Imports::RegisterEventCallback("EVENT_INITPOSTEFFECTS", &CPostEffects::InitialiseCB);
+	Imports::RegisterEventCallback("EVENT_CLOSEPOSTEFFECTS", &CPostEffects::CloseCB);
 }
 
 void DeleteShaders(void)
