@@ -1,4 +1,4 @@
-#include "StdInc.h"
+#include "../StdInc.h"
 
 void (__cdecl *const CClouds::Vtbl::SetUpOneSkyPoly)(CVector topLeft, CVector topRight, CVector botLeft, CVector botRight, unsigned char ucTopRed, unsigned char ucTopGreen, unsigned char ucTopBlue, unsigned char ucBotRed, unsigned char ucBotGreen, unsigned char ucBotBlue) = (decltype(SetUpOneSkyPoly))_CClouds__SetUpOneSkyPoly;
 void (__cdecl *const CClouds::Vtbl::RenderOutGeometryBuffer)(void) = (decltype(RenderOutGeometryBuffer))_CClouds__RenderOutGeometryBuffer;

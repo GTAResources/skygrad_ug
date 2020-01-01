@@ -15,21 +15,21 @@
 #define RADTODEG(x) \
 	((x) * (180.0f / rwPI))
 
-#include "CCamera.h"
-#include "CClouds.h"
-#include "CDraw.h"
-#include "CGame.h"
-#include "CMatrix.h"
-#include "CMatrixLink.h"
-#include "CPlaceable.h"
-#include "CPostEffects.h"
-#include "CRGBA.h"
-#include "CSimpleTransform.h"
-#include "CTimeCycle.h"
-#include "CVector.h"
-#include "CVector2D.h"
-#include "CWeather.h"
-#include "RenderWare.h"
+#include "Game/CCamera.h"
+#include "Game/CClouds.h"
+#include "Game/CDraw.h"
+#include "Game/CGame.h"
+#include "Game/CMatrix.h"
+#include "Game/CMatrixLink.h"
+#include "Game/CPlaceable.h"
+#include "Game/CPostEffects.h"
+#include "Game/CRGBA.h"
+#include "Game/CSimpleTransform.h"
+#include "Game/CTimeCycle.h"
+#include "Game/CVector.h"
+#include "Game/CVector2D.h"
+#include "Game/CWeather.h"
+#include "Game/RenderWare.h"
 
 #define _DoRWStuffStartOfFrame_Horizon	0x0053D7A0
 //extern void (__cdecl *const DoRWStuffStartOfFrame_Horizon)(void);

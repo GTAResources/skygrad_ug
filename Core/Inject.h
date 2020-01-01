@@ -1,4 +1,4 @@
-#include "StdInc.h"
+#include "../StdInc.h"
 
 #ifndef _INJECT_H_
 #define _INJECT_H_

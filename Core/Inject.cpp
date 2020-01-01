@@ -1,6 +1,6 @@
-#include "StdInc.h"
+#include "../StdInc.h"
+#include "../Game/CTimeCycle.h"
 #include "Inject.h"
-#include "CTimeCycle.h"
 
 void GetTimeCycleColours()
 {

@@ -1,4 +1,4 @@
-#include "StdInc.h"
+#include "../StdInc.h"
 
 RwRaster **const CPostEffects::ms_pGrainRaster = (decltype(ms_pGrainRaster))_CPostEffects__ms_pGrainRaster;
 RwRaster *CPostEffects::ms_pGrainRaster8;

@@ -1,2 +1,2 @@
-#include "StdInc.h"
+#include "../StdInc.h"
 #include "CColourSet.h"

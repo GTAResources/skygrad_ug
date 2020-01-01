@@ -15,50 +15,62 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CCamera.h" />
-    <ClInclude Include="CClouds.h" />
-    <ClInclude Include="CColourSet.h" />
-    <ClInclude Include="CDraw.h" />
-    <ClInclude Include="CGame.h" />
-    <ClInclude Include="CMatrix.h" />
-    <ClInclude Include="CMatrixLink.h" />
-    <ClInclude Include="CPlaceable.h" />
-    <ClInclude Include="CPostEffects.h" />
-    <ClInclude Include="CRGBA.h" />
-    <ClInclude Include="CSimpleTransform.h" />
-    <ClInclude Include="CTimeCycle.h" />
-    <ClInclude Include="CVector.h" />
-    <ClInclude Include="CVector2D.h" />
-    <ClInclude Include="CWeather.h" />
-    <ClInclude Include="Hook.h" />
-    <ClInclude Include="Imports.hpp" />
-    <ClInclude Include="Inject.h" />
-    <ClInclude Include="RenderWare.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="StdInc.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CClouds.cpp" />
-    <ClCompile Include="CColourSet.cpp" />
-    <ClCompile Include="CDraw.cpp" />
-    <ClCompile Include="CPostEffects.cpp" />
-    <ClCompile Include="CTimeCycle.cpp" />
-    <ClCompile Include="CVector.cpp" />
-    <ClCompile Include="CWeather.cpp" />
-    <ClCompile Include="DllMain.cpp" />
-    <ClCompile Include="Inject.cpp" />
-    <ClCompile Include="RenderWare.cpp" />
-    <ClCompile Include="StdInc.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release - Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">StdInc.h</PrecompiledHeaderFile>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release - Debug|Win32'">StdInc.h</PrecompiledHeaderFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">StdInc.h</PrecompiledHeaderFile>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
     <ResourceCompile Include="skygrad.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Inject.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Game\CClouds.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Game\CColourSet.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Game\CDraw.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Game\CPostEffects.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Game\CTimeCycle.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Game\CVector.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Game\CWeather.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="Game\RenderWare.cpp">
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../StdInc.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="StdInc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Hook.h" />
+    <ClInclude Include="Core\Inject.h" />
+    <ClInclude Include="Game\CCamera.h" />
+    <ClInclude Include="Game\CClouds.h" />
+    <ClInclude Include="Game\CColourSet.h" />
+    <ClInclude Include="Game\CDraw.h" />
+    <ClInclude Include="Game\CGame.h" />
+    <ClInclude Include="Game\CMatrix.h" />
+    <ClInclude Include="Game\CMatrixLink.h" />
+    <ClInclude Include="Game\CPlaceable.h" />
+    <ClInclude Include="Game\CPostEffects.h" />
+    <ClInclude Include="Game\CRGBA.h" />
+    <ClInclude Include="Game\CSimpleTransform.h" />
+    <ClInclude Include="Game\CTimeCycle.h" />
+    <ClInclude Include="Game\CVector.h" />
+    <ClInclude Include="Game\CVector2D.h" />
+    <ClInclude Include="Game\CWeather.h" />
+    <ClInclude Include="Game\RenderWare.h" />
+    <ClInclude Include="Imports\Underground.hpp" />
+    <ClInclude Include="StdInc.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1148425E-EE1E-4A74-9E0C-DEC86B0559B8}</ProjectGuid>
